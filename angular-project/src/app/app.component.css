@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.wrapper .sidemenu {
+    width: 200px;
+}
+
+.wrapper .content {
+    padding-left: 28px;
+}

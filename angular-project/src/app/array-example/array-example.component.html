@@ -1,0 +1,43 @@
+<!-- <p>{{title}}</p>
+
+<h1>{{no}}</h1>
+
+{{body_parts.hands}}
+
+
+{{countries[0]}}
+
+<p *ngFor="let c of countries">
+  {{c}}
+</p> -->
+
+<!-- <p *ngFor="let p of persons">
+  {{p.name}} - {{p.contact}}
+</p> -->
+
+<table border="1">
+    <tr>
+      <th>
+        #
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Contact Number
+      </th>
+    </tr>
+    <tr *ngFor="let p of persons; let idx = index; let odd = odd; let even = even;" [ngStyle]="{'background-color': odd ? 'green' : 'red' }">
+      <td>{{idx + 1}}</td>
+      <td>{{p['name']}}</td>
+      <td>{{p['contact']}}</td>
+    </tr>
+  
+    <tr>
+      <td colspan="3">
+        Total records is: {{persons.length}}
+      </td>
+    </tr>
+  </table>
+  
+  <p *ngIf="persons.length === 0">No persons found for now.!</p>

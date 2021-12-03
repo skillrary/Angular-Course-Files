@@ -1,0 +1,37 @@
+Name:
+<input type="text" [(ngModel)]="name">
+<br>
+Village:
+<input type="text" [(ngModel)]="village">
+<br>
+
+<button (click)="saveData()">Save</button>
+
+<table border="1" *ngIf="users.length">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Village</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let user of users; let ind = index;">
+        <td>
+            {{ind + 1}}
+        </td>
+        <td>
+            {{user.name}}
+        </td>
+        <td>
+            {{user.village}}
+        </td>
+        <td>
+            <button (click)="deleteUser(ind)">
+                Delete
+            </button>
+
+            <button (click)="editUser(ind)">
+                Edit
+            </button>
+        </td>
+    </tr>
+</table>

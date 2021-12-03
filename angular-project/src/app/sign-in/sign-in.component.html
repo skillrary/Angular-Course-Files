@@ -1,0 +1,31 @@
+<form [formGroup]="signInForm" novalidate (ngSubmit)="onFormSubmit()">
+    
+	<div class="mb-3">
+        <label class="form-label">Email Address</label>
+        <input class="form-control" type="email" formControlName="emailAddress" placeholder="">
+    </div>
+
+    <div *ngIf="getformControl('emailAddress').touched && getformControl('emailAddress').errors?.required">
+		* Required
+	</div>
+	<div *ngIf="getformControl('emailAddress').touched && getformControl('emailAddress').errors?.email">
+		* Check email format
+	</div>
+
+    
+	<div class="mb-3">
+        <label class="form-label">Password</label>
+        <input class="form-control" type="password" formControlName="password" placeholder="">
+    </div>
+    <div *ngIf="getformControl('password').touched && getformControl('password').errors?.required">
+		* Required
+	</div>
+	<div *ngIf="getformControl('password').touched && getformControl('password').errors?.minlength">
+		Minimal length is {{getformControl('password').errors?.minlength.requiredLength}} and actual is {{getformControl('password').errors?.minlength.actualLength}}
+	</div>
+	<div *ngIf="getformControl('password').touched && getformControl('password').errors?.maxlength">
+		Maximum length is {{getformControl('password').errors?.maxlength.requiredLength}} and actual is {{getformControl('password').errors?.maxlength.actualLength}}
+	</div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
