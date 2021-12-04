@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { HeaderComponent } from './layout/header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   counter = 1;
   name = 'Paresh';
+
+  @ViewChild(HeaderComponent) child: any;
   constructor() {
+
+    console.log("constructor");
+
     setTimeout(() => {
-      console.log("After 5 Sec")
+      console.log("After 5 Sec");
     }, 5000);
 
     setTimeout(() => {
@@ -26,6 +32,16 @@ export class AppComponent {
   }
 
   ngOnInit() {
+    console.log("ngOnInit");
+  }
+
+  ngAfterViewInit() {
+    console.log(this.child);
+    console.log("ngAfterViewInit");
+
+    setTimeout(() => {
+      this.child.username = 'Paresh Gami';
+    }, 5000);
   }
 
   childToParent(name: string) {
