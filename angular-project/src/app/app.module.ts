@@ -13,6 +13,8 @@ import { TypescriptExampleComponent } from './typescript-example/typescript-exam
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 import { CustomDatePipe } from './pipes/custom-date.pipe';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { CustomDatePipe } from './pipes/custom-date.pipe';
     TypescriptExampleComponent,
     ProductDetailComponent,
     PipeExampleComponent,
-    CustomDatePipe
+    CustomDatePipe,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

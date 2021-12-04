@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   counter = 1;
+  name = 'Paresh';
   constructor() {
     setTimeout(() => {
       console.log("After 5 Sec")
@@ -25,5 +26,9 @@ export class AppComponent {
   }
 
   ngOnInit() {
+  }
+
+  childToParent(name: string) {
+    console.log(name);
   }
 }
