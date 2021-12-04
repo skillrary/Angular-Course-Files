@@ -10,6 +10,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { ArrayExampleComponent } from './array-example/array-example.component';
 import { ProductsComponent } from './products/products.component';
 import { TypescriptExampleComponent } from './typescript-example/typescript-example.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TypescriptExampleComponent } from './typescript-example/typescript-exam
     SignUpComponent,
     ArrayExampleComponent,
     ProductsComponent,
-    TypescriptExampleComponent
+    TypescriptExampleComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
