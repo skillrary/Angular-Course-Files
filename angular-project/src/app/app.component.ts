@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +6,22 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-project';
-  no = 10;
+  counter = 1;
   constructor() {
-    alert(environment.name);
+    setTimeout(() => {
+      console.log("After 5 Sec")
+    }, 5000);
+
+    setTimeout(() => {
+      console.log("After 4 Sec")
+    }, 4000);
+
+    let intObj = setInterval(() => {
+      this.counter++;
+      if (this.counter === 30) {
+        clearInterval(intObj);
+      }
+    }, 1000);
   }
 
   ngOnInit() {
