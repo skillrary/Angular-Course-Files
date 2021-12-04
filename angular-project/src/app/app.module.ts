@@ -11,6 +11,8 @@ import { ArrayExampleComponent } from './array-example/array-example.component';
 import { ProductsComponent } from './products/products.component';
 import { TypescriptExampleComponent } from './typescript-example/typescript-example.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+import { CustomDatePipe } from './pipes/custom-date.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ArrayExampleComponent,
     ProductsComponent,
     TypescriptExampleComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    PipeExampleComponent,
+    CustomDatePipe
   ],
   imports: [
     BrowserModule,

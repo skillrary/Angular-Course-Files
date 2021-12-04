@@ -1,0 +1,17 @@
+<p>{{"pipe-example works!" | uppercase}}</p>
+<p>{{"PIPE EXAMPLE WORKS!" | lowercase}} </p>
+<p>{{"PARESH GAMI DEVELOPER" | titlecase}}</p>
+<p>{{date | date: 'medium' }}</p>
+
+{{ 1234.56 | currency:'INR' }}
+
+<!-- Refer for date pipe -->
+<!-- https://angular.io/api/common/DatePipe -->
+<!-- https://codecraft.tv/courses/angular/pipes/built-in-pipes/ -->
+
+<br>
+Custom Pipe Example<br>
+-------------------------------<br>
+{{date | customDate}}
+<br>
+{{date1 | customDate}}
