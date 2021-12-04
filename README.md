@@ -17,3 +17,8 @@ https://angular.io/guide/lifecycle-hooks
 
 BehaviorSubject
 https://levelup.gitconnected.com/5-ways-to-share-data-between-angular-components-d656a7eb7f96
+
+
+
+Make tutorial:
+https://angular.io/tutorial
