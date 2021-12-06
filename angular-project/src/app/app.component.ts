@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { HeaderComponent } from './layout/header/header.component';
+import { MessageService } from './services/message.service';
 
 @Component({
   selector: 'app-root',
@@ -8,43 +9,58 @@ import { HeaderComponent } from './layout/header/header.component';
 })
 export class AppComponent {
   counter = 1;
-  name = 'Paresh';
+  // name = 'Paresh';
 
+  username = '';
   @ViewChild(HeaderComponent) child: any;
-  constructor() {
-
-    console.log("constructor");
-
+  constructor(
+    private messageService: MessageService
+  ) {
     setTimeout(() => {
-      console.log("After 5 Sec");
+      // console.log("After 5 Sec");
     }, 5000);
 
     setTimeout(() => {
-      console.log("After 4 Sec")
+      // console.log("After 4 Sec")
     }, 4000);
 
-    let intObj = setInterval(() => {
-      this.counter++;
-      if (this.counter === 30) {
-        clearInterval(intObj);
+    // let intObj = setInterval(() => {
+    //   this.counter++;
+    //   if (this.counter === 30) {
+    //     clearInterval(intObj);
+    //   }
+    // }, 1000);
+
+    this.messageService.currentMessage.subscribe(res => {
+      if (res === 'User-Logged-In') {
+        this.loadUser();
       }
-    }, 1000);
+    });
+
+  }
+
+  loadUser() {
+    if (localStorage.getItem('loggedInWith')) {
+      this.username = localStorage.getItem('loggedInWith') || '';
+    } else {
+      this.username = '';
+    }
   }
 
   ngOnInit() {
-    console.log("ngOnInit");
+    this.loadUser();
   }
 
   ngAfterViewInit() {
-    console.log(this.child);
-    console.log("ngAfterViewInit");
+    // console.log(this.child);
+    // console.log("ngAfterViewInit");
 
     setTimeout(() => {
-      this.child.username = 'Paresh Gami';
+      // this.child.username = 'Paresh Gami';
     }, 5000);
   }
 
   childToParent(name: string) {
-    console.log(name);
+    // console.log(name);
   }
 }

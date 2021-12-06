@@ -15,8 +15,14 @@
     
 	<div class="mb-3">
         <label class="form-label">Password</label>
-        <input class="form-control" type="password" formControlName="password" placeholder="">
+        <input class="form-control" [type]="isPasswordVisible ? 'text' : 'password'" formControlName="password" placeholder="">
     </div>
+
+	<button class="btn btn-link" (click)="isPasswordVisible = !isPasswordVisible">
+		{{isPasswordVisible ? 'Hide Password' : 'Show Password'}}
+	</button>
+
+	<br>
     <div *ngIf="getformControl('password').touched && getformControl('password').errors?.required">
 		* Required
 	</div>

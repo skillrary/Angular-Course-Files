@@ -1,4 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+import { MessageService } from 'src/app/services/message.service';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +11,20 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input() username:string;
   @Output() childToParent = new EventEmitter();
-  constructor() { }
+  constructor(
+    private auth: AuthService,
+    private router: Router,
+    private messageService: MessageService
+  ) { }
 
   ngOnInit(): void {
-    console.log(this.username);
+    // console.log(this.username);
   }
 
   logout() {
-    this.childToParent.emit('Lorem Ipsum');
+    this.auth.logout();
+    this.router.navigate(['sign-in']);
+    this.messageService.changeMessage('User-Logged-In');
   }
 
 }
