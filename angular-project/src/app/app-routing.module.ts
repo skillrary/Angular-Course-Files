@@ -4,6 +4,8 @@ import { ArrayExampleComponent } from './array-example/array-example.component';
 import { AuthGuard } from './auth.guard';
 import { LsExampleComponent } from './ls-example/ls-example.component';
 import { PipeExampleComponent } from './pipe-example/pipe-example.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
+import { PostsComponent } from './posts/posts.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductsComponent } from './products/products.component';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -24,7 +26,9 @@ export const routes: Routes = [
   { path: 'typescript', component: TypescriptExampleComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'product-detail/:product_id', component: ProductDetailComponent },
-  { path: 'pipe', component: PipeExampleComponent }
+  { path: 'pipe', component: PipeExampleComponent },
+  { path: 'posts', component: PostsComponent },
+  { path: 'post-details/:id', component: PostDetailsComponent }
 ];
 
 @NgModule({

@@ -15,6 +15,9 @@ import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 import { CustomDatePipe } from './pipes/custom-date.pipe';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PostsComponent } from './posts/posts.component';
+import { PostDetailsComponent } from './post-details/post-details.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +32,16 @@ import { FooterComponent } from './layout/footer/footer.component';
     PipeExampleComponent,
     CustomDatePipe,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PostsComponent,
+    PostDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
