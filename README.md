@@ -28,3 +28,9 @@ https://angular.io/tutorial
 toaster:
 
 https://ngx-toastr.vercel.app/
+
+
+Sample inteview questions
+-------------------------
+https://www.edureka.co/blog/interview-questions/typescript-interview-questions/
+https://www.interviewbit.com/typescript-interview-questions/
