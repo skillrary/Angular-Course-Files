@@ -1,0 +1,15 @@
+<h1>Add New Post</h1>
+<form [formGroup]="addNewPost" novalidate (ngSubmit)="onFormSubmit()">
+    
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" formControlName="title" placeholder="">
+    </div>
+    
+    <div class="form-group">
+        <label for="body">Body</label>
+        <input type="text" class="form-control" id="body" formControlName="body" placeholder="">
+    </div>
+    
+    <button class="btn btn-success" type="submit">Submit</button>
+</form>

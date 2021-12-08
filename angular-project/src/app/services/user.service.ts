@@ -6,9 +6,11 @@ import { Injectable } from '@angular/core';
 export class UserService {
   private users = [
     {
+      userId: 1,
       emailAddress: 'john@example.com',
       password: 'john@123'
     }, {
+      userId: 2,
       emailAddress: 'spiderman@example.com',
       password: 'spiderman'
     }
@@ -20,6 +22,7 @@ export class UserService {
     
     if (user) {
       localStorage.setItem('loggedInWith', user.emailAddress);
+      localStorage.setItem('userId', user.userId.toString());
       return true;
     } else {
       return false;

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddPostComponent } from './add-post/add-post.component';
 import { ArrayExampleComponent } from './array-example/array-example.component';
 import { AuthGuard } from './auth.guard';
 import { LsExampleComponent } from './ls-example/ls-example.component';
@@ -28,7 +29,8 @@ export const routes: Routes = [
   { path: 'product-detail/:product_id', component: ProductDetailComponent },
   { path: 'pipe', component: PipeExampleComponent },
   { path: 'posts', component: PostsComponent },
-  { path: 'post-details/:id', component: PostDetailsComponent }
+  { path: 'post-details/:id', component: PostDetailsComponent },
+  { path: 'add-new-post', component: AddPostComponent }
 ];
 
 @NgModule({

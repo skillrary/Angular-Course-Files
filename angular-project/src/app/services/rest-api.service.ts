@@ -14,4 +14,12 @@ export class RestApiService {
   get(apiURL: string): Observable<any> {
     return this.http.get(apiURL);
   }
+
+  post(apiURL: string, data: any):Observable<any> {
+    return this.http.post(apiURL, data);
+  }
+
+  delete(apiURL: string): Observable<any> {
+    return this.http.delete(apiURL);
+  }
 }

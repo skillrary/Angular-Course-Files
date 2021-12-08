@@ -18,4 +18,12 @@ export class PostService {
   getPostDetails(id: string) {
     return this.restService.get(`${urls.posts}/${id}`);
   }
+
+  addPost(obj: {title: string, body: string, userId:string}) {
+    return this.restService.post(`${urls.posts}`, obj);
+  }
+
+  deletePost(postId: number) {
+    return this.restService.delete(`${urls.posts}/${postId}`);
+  }
 }

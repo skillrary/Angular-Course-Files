@@ -14,4 +14,8 @@ export class AuthService {
   public logout() {
     localStorage.clear();
   }
+
+  get userId() {
+    return localStorage.getItem('userId');
+  }
 }

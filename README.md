@@ -24,9 +24,7 @@ Make tutorial:
 https://angular.io/tutorial
 
 
-Demo Done by on Monday:
 
-Yugandhar IJ
-Siva chandrika
-S. Rubiya
-Harshini
+toaster:
+
+https://ngx-toastr.vercel.app/

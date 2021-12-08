@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@ang
 import { Router } from '@angular/router';
 import { MessageService } from '../services/message.service';
 import { UserService } from '../services/user.service';
+import { UtilityService } from '../services/utility.service';
 
 @Component({
     selector: 'app-sign-in',
@@ -13,10 +14,10 @@ export class SignInComponent implements OnInit {
     signInForm: FormGroup;
     isPasswordVisible: boolean;
     constructor(
-        private formBuilder: FormBuilder,
         private userService: UserService,
         private router: Router,
-        private messageService: MessageService
+        private messageService: MessageService,
+        private utility: UtilityService
     ) {
         this.signInForm = new FormGroup({
             emailAddress: new FormControl('', [Validators.required, Validators.email]),
@@ -37,6 +38,9 @@ export class SignInComponent implements OnInit {
         if (isLoggedIn) {
             this.messageService.changeMessage("User-Logged-In");
             this.router.navigate(['products']);
+            this.utility.showToast('success', 'User loggedin successfully.!', 'Welcome Again.!');
+        } else {
+            this.utility.showToast('error', 'Please enter correct username or password', 'Oops!');
         }
     }
 

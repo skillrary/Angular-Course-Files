@@ -19,4 +19,11 @@ export class PostsComponent implements OnInit {
     });
   }
 
+  deletePost(id: number) {
+    this.postService.deletePost(id)
+    .subscribe(res => {
+      console.log(res);
+    });
+  }
+
 }
