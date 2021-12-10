@@ -15,12 +15,13 @@ import { PipeExampleComponent } from './pipe-example/pipe-example.component';
 import { CustomDatePipe } from './pipes/custom-date.pipe';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PostsComponent } from './posts/posts.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { TestInterceptor } from './test.interceptor';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,9 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TestInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
