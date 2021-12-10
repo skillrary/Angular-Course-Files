@@ -34,3 +34,8 @@ Sample inteview questions
 -------------------------
 https://www.edureka.co/blog/interview-questions/typescript-interview-questions/
 https://www.interviewbit.com/typescript-interview-questions/
+https://www.interviewbit.com/javascript-interview-questions/
+
+Useful angular libs
+-------------------
+https://www.telerik.com/blogs/17-angular-libraries-you-should-know-about
