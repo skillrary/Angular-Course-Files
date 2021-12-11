@@ -39,3 +39,20 @@ https://www.interviewbit.com/javascript-interview-questions/
 Useful angular libs
 -------------------
 https://www.telerik.com/blogs/17-angular-libraries-you-should-know-about
+
+
+
+Observables
+-----------
+https://codecraft.tv/courses/angular/http/http-with-observables/
+
+
+
+Angular Promises Versus Observables
+-----------------------------------
+https://www.syncfusion.com/blogs/post/angular-promises-versus-observables.aspx
+
+
+Angular animations
+------------------
+https://www.freecodecamp.org/news/how-to-use-animation-with-angular-6-675b19bc3496/

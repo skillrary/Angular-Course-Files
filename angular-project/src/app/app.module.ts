@@ -22,6 +22,7 @@ import { AddPostComponent } from './add-post/add-post.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { TestInterceptor } from './test.interceptor';
+import { AnimationDemoComponent } from './animation-demo/animation-demo.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { TestInterceptor } from './test.interceptor';
     FooterComponent,
     PostsComponent,
     PostDetailsComponent,
-    AddPostComponent
+    AddPostComponent,
+    AnimationDemoComponent
   ],
   imports: [
     BrowserModule,
